@@ -1,0 +1,24 @@
+Pattern 1: The Frequency Map (Counting & Distribution)Used for: Valid Anagram, 
+Top K Frequent Elements, First Unique Character, 
+Palindrome Permutation.The Concept: Count how many times an element appears so you can verify thresholds or find anomalies.
+
+#include <unordered_map>
+#include <vector>
+#include <string>
+
+void frequencyPattern(const std::vector<int>& nums) {
+    // Step 1: Create the map (Key: Element -> Value: Count)
+    std::unordered_map<int, int> counts;
+    
+    // Step 2: Tally frequencies
+    for (int num : nums) {
+        counts[num]++;
+    }
+    
+    // Step 3: Evaluate frequencies using Structured Bindings (C++17)
+    for (const auto& [element, freq] : counts) {
+        if (freq > 1) {
+            // Process duplicates or check conditions
+        }
+    }
+}
